@@ -1,6 +1,6 @@
 <h1>Listing locations</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Image url</th>
     <th>Name</th>
@@ -13,7 +13,7 @@
 
 <% @locations.each do |location| %>
   <tr>
-    <td><%= location.image_url %></td>
+    <td><%= image_tag(location.image_url) %></td>
     <td><%= location.name %></td>
     <td><%= location.description %></td>
     <td><%= location.category %></td>
