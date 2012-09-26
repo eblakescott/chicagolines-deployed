@@ -1,0 +1,25 @@
+<h1>Listing waits</h1>
+
+<table>
+  <tr>
+    <th>Duration</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @waits.each do |wait| %>
+  <tr>
+    <td><%= wait.duration %></td>
+    <td><%= wait.location_id %></td>
+    <td><%= link_to 'Show', wait %></td>
+    <td><%= link_to 'Edit', edit_wait_path(wait) %></td>
+    <td><%= link_to 'Destroy', wait, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wait', new_wait_path %>

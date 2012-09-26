@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Duration:</b>
+  <%= @wait.duration %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @wait.location_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_wait_path(@wait) %> |
+<%= link_to 'Back', waits_path %>

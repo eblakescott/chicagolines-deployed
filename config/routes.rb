@@ -1,4 +1,6 @@
 Chicagolines::Application.routes.draw do
+  resources :waits
+
   resources :locations
 
   # The priority is based upon order of creation:
