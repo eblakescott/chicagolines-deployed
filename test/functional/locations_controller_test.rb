@@ -3,6 +3,12 @@ require 'test_helper'
 class LocationsControllerTest < ActionController::TestCase
   setup do
     @location = locations(:one)
+    @update = {
+      image_url:	'lorem.jpg',
+      name:		'Lorem Ipsum',
+      description:	'Wibbles are fun!',
+      category:		'Museums'
+      }
   end
 
   test "should get index" do
@@ -18,7 +24,7 @@ class LocationsControllerTest < ActionController::TestCase
 
   test "should create location" do
     assert_difference('Location.count') do
-      post :create, location: { category: @location.category, description: @location.description, image_url: @location.image_url, name: @location.name }
+      post :create, location: @update
     end
 
     assert_redirected_to location_path(assigns(:location))
@@ -35,7 +41,7 @@ class LocationsControllerTest < ActionController::TestCase
   end
 
   test "should update location" do
-    put :update, id: @location, location: { category: @location.category, description: @location.description, image_url: @location.image_url, name: @location.name }
+    put :update, id: @location, location: @update
     assert_redirected_to location_path(assigns(:location))
   end
 
