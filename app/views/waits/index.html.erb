@@ -1,13 +1,20 @@
-<h1>Listing waits</h1>
-
-<table>
-  <tr>
-    <th>Duration</th>
-    <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<form-inline>
+<legend>Enter a New Wait Time</legend>
+<label>What's the Wait?</label>
+<input type="integer" placeholder="10"><span class="add-on">minutes</span>
+<legend>Select the Location Category or     <form class="form-search">
+    <input type="text" class="input-medium search-query">
+    <button type="submit" class="btn">Search</button>
+    </form></legend>
+<select multiple="multiple">
+<option>Museums</option>
+<option>Bars</option>
+<option>Clubs</option>
+<option>Restaurants</option>
+<option>Events</option>
+</select>
+<br />
+<button type="submit" class="btn btn-primary">Submit</button>
 
 <% @waits.each do |wait| %>
   <tr>
@@ -18,7 +25,7 @@
     <td><%= link_to 'Destroy', wait, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
-</table>
+</form>
 
 <br />
 
