@@ -1,6 +1,8 @@
 Chicagolines::Application.routes.draw do
   resources :pages
 
+root :to => 'pages#welcome' # map / to the custom welcome action of the pages controller
+
   resources :waits
 
   resources :locations
