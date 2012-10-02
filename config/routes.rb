@@ -3,9 +3,15 @@ Chicagolines::Application.routes.draw do
 
 root :to => 'pages#welcome' # map / to the custom welcome action of the pages controller
 
-  resources :waits
-
-  resources :locations
+  resources :locations do
+	resources :waits, :only => [:index, :create, :destroy]
+        # No need to show individual Waits,
+        # or to edit/update existing ones.
+        # Just list all the Waits on a given
+        # Location, and enable the creation of
+        # a new Wait via a form right on the index.html.erb
+        # view, rather than a separate new.html.erb (thus no :new)
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
