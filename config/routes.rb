@@ -1,4 +1,6 @@
 Chicagolines::Application.routes.draw do
+  resources :pages
+
   resources :waits
 
   resources :locations
