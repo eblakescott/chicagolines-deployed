@@ -1,46 +1,13 @@
-<!--<p id="notice"><%= notice %></p>
-
-<p hidden="hidden">>
-  <b>Image url:</b>
-  <%= @location.image_url %>
-</p>
-
-<p hidden="hidden">
-  <b>Name:</b>
-  <%= @location.name %>
-</p>
-
-<p hidden="hidden">
-  <b>Description:</b>
-  <%= @location.description %>
-</p>
-
-<p hidden="hidden">
-  <b>Category:</b>
-  <%= @location.category %>
-</p>
-
-<p>
-  <b>Current Wait:</b>
-  <%= @location.waits.last %>
-</p>
-
-
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>-->
-
 <!--Duplicate this markup in the Comments index view.-->
 <blockquote class="hero-unit">
   <div>
     <h3><%= @location.name %></h3>
     <small>
-      <%= @location.description %>
+      <%= @location.image_url %>
     </small>
   </div>
 </blockquote>
 
-<p><%= link_to pluralize(@location.waits.count, 'wait'), location_waits_path(@location), class: "btn btn-primary" %></p>
+<p><%= link_to 'Current Wait', location_waits_path(@location), class: "btn btn-primary" %></p>
 
 <p><%= link_to 'See all locations', locations_path %></p>
-
-
