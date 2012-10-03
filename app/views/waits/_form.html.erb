@@ -1,4 +1,4 @@
-<%= form_for(@wait) do |f| %>
+<%= form_for([@location, @wait]) do |f| %>
   <% if @wait.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@wait.errors.count, "error") %> prohibited this wait from being saved:</h2>

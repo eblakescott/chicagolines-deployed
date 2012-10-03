@@ -1,32 +1,17 @@
-<form-inline>
-<legend>Enter a New Wait Time</legend>
-<label>What's the Wait?</label>
-<input type="integer" placeholder="10"><span class="add-on">minutes</span>
-<legend>Select the Location Category or     <form class="form-search">
-    <input type="text" class="input-medium search-query">
-    <button type="submit" class="btn">Search</button>
-    </form></legend>
-<select multiple="multiple">
-<option>Museums</option>
-<option>Bars</option>
-<option>Clubs</option>
-<option>Restaurants</option>
-<option>Events</option>
-</select>
-<br />
-<button type="submit" class="btn btn-primary">Submit</button>
+<!--Crib this markup from the simplified Location show view-->
+<blockquote class="hero-unit">
+  <div>
+    <h3><%= @location.name %></h3>
+    <small>
+      <%= @location.description %>
+    </small>
+  </div>
+</blockquote>
 
-<% @waits.each do |wait| %>
-  <tr>
-    <td><%= wait.duration %></td>
-    <td><%= wait.location_id %></td>
-    <td><%= link_to 'Show', wait %></td>
-    <td><%= link_to 'Edit', edit_wait_path(wait) %></td>
-    <td><%= link_to 'Destroy', wait, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</form>
+<!--...but always display the form for a new wait.-->
 
-<br />
+<h2>Have a new wait time for this location? Enter it here.</h2>
 
-<%= link_to 'New Wait', new_wait_path %>
+<%= render 'form' %>
+
+<p><%= link_to 'See all locations', locations_path %></p>
