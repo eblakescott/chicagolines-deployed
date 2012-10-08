@@ -1,4 +1,22 @@
 class LocationsController < ApplicationController
+
+ # Here is our custom category action; this is lifted almost verbatim from
+  # the index action, except that we use the find_all_by_XXX method that
+  # Rails gives us, and the params[:category] fragment from the route we
+  # created. To double-up on the views, we tell category to render the view
+  # in app/views/locations/index.html.erb -- although if the category view
+  # were drastically different, we could leave out the render line and just
+  # create a view in app/views/locations/category.html.erb
+
+  # GET /locations/:category/list
+  def category
+    @locations = Location.find_all_by_category(params[:category])
+
+    respond_to do |format|
+      format.html { render :template => "locations/index" } # index.html.erb
+    end
+  end
+
   # GET /locations
   # GET /locations.json
   def index

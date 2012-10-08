@@ -3,6 +3,13 @@ Chicagolines::Application.routes.draw do
 
 root :to => 'pages#welcome' # map / to the custom welcome action of the pages controller
 
+ # We will set up a custom route here, using a URL pattern referring to the :category
+  # field in the model, and point it to a custom category action on the locations
+  # controller. Finally, we give this route a name so we can use link_to and other
+  # Rails helpers, should we decide to change the URL pattern before deploying the app
+  # to the world, for example.
+  get "/locations/:category/list" => "locations#category", :as => "location_by_category"
+
   resources :locations do
 	resources :waits, :only => [:index, :create, :destroy]
         # No need to show individual Waits,
