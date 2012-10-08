@@ -3,10 +3,10 @@
   <div>
     <h3><%= @location.name %></h3>
     <small>
-      <%= @location.description %>
+      <%= image_tag(@location.image_url) %>
     </small>
-  </div>
-</blockquote>
+    </div>
+
 
 <!--Only display the comments list if there are comments...-->
 
@@ -15,13 +15,15 @@
   <% @location.waits.each do |wait| %>
     <li class="well">
       <div>
-        <%= wait.duration %>
+        <%= wait.duration %><p>minutes</p>
       </div>
       <%= link_to 'Destroy', location_wait_path(@location,wait), method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   </ul>
 <% end %>
 <% end %>
+</blockquote>
+
 <!--...but always display the form for a new wait.-->
 
 <h2>Have a new wait time for this location? Enter it here.</h2>
