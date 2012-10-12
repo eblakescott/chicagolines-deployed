@@ -1,29 +1,11 @@
 <!--This view is rendered for the welcome action on the Pages controller-->
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2">
-          <form class="form-inline">
-    <input type="text" class="input-small" placeholder="Email">
-    <input type="password" class="input-small" placeholder="Password">
-    <label class="checkbox">
-    <input type="checkbox"> Remember me
-    </label>
-    <button type="submit" class="btn">Sign in</button>
-    </form>
-    </div>
-    <div class="span10">
-    <div class="row">  
-    <div class="span10"><h1>No Line No Wait Chicago</h1></div>
-    </div>
-    <div class="row">
-    <div class="span10"><h2>What are you waiting for?</h2></div>
-    </div>
-    <div class="row">
-      <div class="span10"><form class="form-search"><div class="input-append"><input type="text" class="span8 search-query" placeholder="Enter your location"><button type="submit" class="btn">Search</button></div></form></div>
-    </div>
-  
-<hr />
+<header>
+<div class="container">
+<h1>No Line</h1>
+</div>
+</header>
 
+<div class="container">
 <h2>
 Browse for your location
 </h2>
@@ -34,4 +16,3 @@ Browse for your location
   <div class="span3"><%= link_to 'Events', locations_path %></div>
 </div> 
 </div>  
-</div> 
