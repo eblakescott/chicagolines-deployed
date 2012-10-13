@@ -1,17 +1,49 @@
 <!--This view is rendered for the welcome action on the Pages controller-->
 <header>
-<div class="container">
-<h1>No Line No Wait</h1>
-</div>
 </header>
-<form class="form-search">
-<input class="span6" type="text" placeholder="Where are you going?">
-<button type="submit" class="btn">Search</button>
-</form> 
 <div class="container">
 <h2>
 Browse for your location
 </h2>
+<ul class="thumbnails">
+  <li class="span4">
+   <a href="locations/museum/list" class="thumbnail">
+    <!--<%= image_tag("bar.jpg", size: "300x200") %>-->
+    <h3>Museums</h3>
+    <p>Thumbnail caption...</p>
+    </a>
+  </li>
+   <li class="span4">
+    <a href="locations/restaurant/list" class="thumbnail">
+    <!--<%= image_tag("bar.jpg", size: "300x200") %>-->
+    <h3>Restaurants</h3>
+    <p>Thumbnail caption...</p>
+    </a>
+  </li>
+<li class="span4">
+    <a href="locations/club/list" class="thumbnail">
+    <%= image_tag("club.jpg", size: "300x200") %>
+    <h3>Clubs</h3>
+    <p>Thumbnail caption...</p>
+    </a>
+  </li>
+<li class="span4">
+    <a href="locations/bar/list" class="thumbnail">
+    <!--<%= image_tag("bar.jpg", size: "300x200") %>-->
+    <h3>Bars</h3>
+    <p>Thumbnail caption...</p>
+    </a>
+  </li>
+<li class="span4">
+    <a href="locations/event/list" class="thumbnail">
+    <!--<%= image_tag("bar.jpg", size: "300x200") %>-->
+    <h3>Events</h3>
+    <p>Thumbnail caption...</p>
+    </a>
+  </li>
+
+</ul>
+<!--
 <div class="row">
   <div class="span4"><a href="locations/museum/list"><%= image_tag("field_museum_2.jpg", size: "150x107") %></a></div>
   <div class="span4"><a href="locations/club/list"><%= image_tag("club.jpg", size: "150x113") %></a></div>
@@ -20,6 +52,6 @@ Browse for your location
 <div class="row">  
   <div class="span4"><a href="locations/bar/list"><%= image_tag("bar.jpg", size: "150x184") %></a></div>
   <div class="span4"><a href="locations/event/list"><%= image_tag("event.jpg", size: "150x84") %></a></div>
-  <!--<div class="span4"><%= link_to 'All Locations', locations_path %></div>-->
-</div>
+  <!--<div class="span4"><%= link_to 'All Locations', locations_path %></div>
+</div>-->
 </div>  
