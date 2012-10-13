@@ -1,18 +1,25 @@
 <!--This view is rendered for the welcome action on the Pages controller-->
 <header>
 <div class="container">
-<h1>No Line</h1>
+<h1>No Line No Wait</h1>
 </div>
 </header>
-
+<form class="form-search">
+<input class="span6" type="text" placeholder="Where are you going?">
+<button type="submit" class="btn">Search</button>
+</form> 
 <div class="container">
 <h2>
 Browse for your location
 </h2>
 <div class="row">
-  <div class="span3"><%= link_to 'Museums', locations_path %></div>
-  <div class="span3"><%= link_to 'Clubs and Bars', locations_path %></div>
-  <div class="span3"><%= link_to 'Restaurants', locations_path %></div>
-  <div class="span3"><%= link_to 'Events', locations_path %></div>
-</div> 
+  <div class="span4"><a href="locations/museum/list"><%= image_tag("field_museum_2.jpg", size: "150x107") %></a></div>
+  <div class="span4"><a href="locations/club/list"><%= image_tag("club.jpg", size: "150x113") %></a></div>
+  <div class="span4"><a href="locations/restaurant/list"><%= image_tag("restaurant.jpg", size: "150x195") %></a></div>
+</div>
+<div class="row">  
+  <div class="span4"><a href="locations/bar/list"><%= image_tag("bar.jpg", size: "150x184") %></a></div>
+  <div class="span4"><a href="locations/event/list"><%= image_tag("event.jpg", size: "150x84") %></a></div>
+  <!--<div class="span4"><%= link_to 'All Locations', locations_path %></div>-->
+</div>
 </div>  
