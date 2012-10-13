@@ -53,3 +53,31 @@ waits = location.waits.create([
   { duration: '15' },
   { duration: '20' }
 ])
+
+location = Location.create({image_url: 'bar.jpg', name: 'Bar', description: %{<p>The Field Museum of Natural History (abbreviated FMNH) is located in Chicago, Illinois, USA. It sits on Lake Shore Drive next to Lake Michigan, part of a scenic complex known as the Museum Campus Chicago. The museum collections contain over 21 million specimens, of which only a small portion are ever on display. The president of the museum is Richard W. Lariviere.</p>}, category: 'bar'})
+waits = location.waits.create([
+  { duration: '10' },
+  { duration: '15' },
+  { duration: '20' }
+])
+
+location = Location.create({image_url: 'club.jpg', name: 'Club', description: %{<p>The Field Museum of Natural History (abbreviated FMNH) is located in Chicago, Illinois, USA. It sits on Lake Shore Drive next to Lake Michigan, part of a scenic complex known as the Museum Campus Chicago. The museum collections contain over 21 million specimens, of which only a small portion are ever on display. The president of the museum is Richard W. Lariviere.</p>}, category: 'club'})
+waits = location.waits.create([
+  { duration: '10' },
+  { duration: '15' },
+  { duration: '20' }
+])
+
+location = Location.create({image_url: 'event.jpg', name: 'Event', description: %{<p>The Field Museum of Natural History (abbreviated FMNH) is located in Chicago, Illinois, USA. It sits on Lake Shore Drive next to Lake Michigan, part of a scenic complex known as the Museum Campus Chicago. The museum collections contain over 21 million specimens, of which only a small portion are ever on display. The president of the museum is Richard W. Lariviere.</p>}, category: 'event'})
+waits = location.waits.create([
+  { duration: '10' },
+  { duration: '15' },
+  { duration: '20' }
+])
+
+location = Location.create({image_url: 'restaurant.jpg', name: 'Restaurant', description: %{<p>The Field Museum of Natural History (abbreviated FMNH) is located in Chicago, Illinois, USA. It sits on Lake Shore Drive next to Lake Michigan, part of a scenic complex known as the Museum Campus Chicago. The museum collections contain over 21 million specimens, of which only a small portion are ever on display. The president of the museum is Richard W. Lariviere.</p>}, category: 'restaurant'})
+waits = location.waits.create([
+  { duration: '10' },
+  { duration: '15' },
+  { duration: '20' }
+])
