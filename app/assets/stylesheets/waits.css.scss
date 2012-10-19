@@ -22,10 +22,20 @@ body {
 
 }
 
-.navbar .brand {
-color: #ffffff;
+.navbar-inner {
+border-radius: 0 0 4px 4px;
 }
 
 .navbar .nav li a {
 color: #ffffff;
+margin: 0 10px 0 10px;
+}
+
+.navbar .nav li a:hover {
+color: #ed1652;
+background-color: white;
+}
+
+.navbar-search .search-query {
+margin-left: 20px;
 }
