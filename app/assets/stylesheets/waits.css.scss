@@ -5,11 +5,13 @@
 @import "twitter/bootstrap";
 
 .container {
-background-color: black;
 
 }
 
 .nlnw-banner {
+padding-top: 20px;
+padding-bottom: 20px;
+background-color: black;
 }
 
 .thumbnail {
@@ -17,8 +19,7 @@ margin: 10px;
 }
 
 body {
-color: #ffffff;
-background-color: black;
+
 }
 
 .navbar .brand {

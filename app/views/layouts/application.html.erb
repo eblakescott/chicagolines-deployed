@@ -15,12 +15,12 @@
 <div class="nlnw-banner"><%= link_to(image_tag("nlnw-banner-fluid.gif"), root_url) %></div>
     <div class="navbar">
     <div class="navbar-inner">
-    <a class="brand" href="#">Title</a>
     <ul class="nav">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">Link</a></li>
-    <!--"Karl, the link below is what I was talking about in class. How do I write it so that it goes locations/museum/list"?-->
-    <li><%= link_to "Museums", locations_path %></li>
+   <li><%= link_to "Museums", location_by_category_path('museum') %></li>
+   <li><%= link_to "Restaurants", location_by_category_path('restaurant') %></li>
+   <li><%= link_to "Clubs", location_by_category_path('club') %></li> 
+   <li><%= link_to "Bars", location_by_category_path('bar') %></li>
+   <li><%= link_to "Events", location_by_category_path('event') %></li>
     <form class="navbar-search pull-left">
     <input type="text" class="search-query" placeholder="Search">
     </form>
