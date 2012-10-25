@@ -1,4 +1,6 @@
 Chicagolines::Application.routes.draw do
+  devise_for :members
+
   resources :pages
 
 root :to => 'pages#welcome' # map / to the custom welcome action of the pages controller
