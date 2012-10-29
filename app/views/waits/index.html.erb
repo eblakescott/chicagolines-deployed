@@ -29,6 +29,6 @@
   <h2>Have a new wait time for this location? Enter it here.</h2>
   <%= render 'form' %>
 <% else %>
-  <%= link_to "Sign up", new_member_registration_path %> or <%= link_to "sign in", new_member_session_path %>
+  <h2><%= link_to "Sign up", new_member_registration_path %> or <%= link_to "sign in", new_member_session_path %> to update this location's wait time!</h2>
 <% end %>
-  <p><%= link_to 'See all locations', locations_path %></p>
+  <!--<p><%= link_to 'See all locations', locations_path %></p>-->
