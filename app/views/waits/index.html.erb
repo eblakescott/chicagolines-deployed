@@ -15,16 +15,19 @@
   <% @location.waits.each do |wait| %>
     <li class="well">
       <div>
-        <%= wait.duration %><p>minutes</p>
+        <%= wait.duration %><p>minutes</p>Posted at <%= wait.updated_at %>
       </div>
       <!--<%= link_to 'Destroy', location_wait_path(@location,wait), method: :delete, data: { confirm: 'Are you sure?' } %>-->
     </li>
   </ul>
 <% end %>
+
+<% else %>
+<h2>There are no current wait times for this location</h2>
 <% end %>
 </blockquote>
 
-<!--Display the form for a new wait for anonymous members; otherwise provide sign up and sign in links.-->
+<!--Display the form for a new wait for registered members; otherwise provide sign up and sign in links for anonymous users-->
 <% if member_signed_in? %>
   <h2>Have a new wait time for this location? Enter it here.</h2>
   <%= render 'form' %>
