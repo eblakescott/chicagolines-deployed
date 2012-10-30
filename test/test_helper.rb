@@ -10,4 +10,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+#For Devise, per http://pupeno.com/2010/09/26/undefined-method-authenticate/
+class ActionController::TestCase
+  include Devise::TestHelpers
+end
+
 end
