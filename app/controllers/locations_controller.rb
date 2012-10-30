@@ -17,6 +17,12 @@ class LocationsController < ApplicationController
     end
   end
 
+#Trying to implement a search; currently not filtering
+def index
+  @locations = Location.search(params[:search])
+end
+
+
   # GET /locations
   # GET /locations.json
   def index
