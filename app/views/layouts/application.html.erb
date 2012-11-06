@@ -22,17 +22,19 @@
    <li><%= link_to "Clubs", locations_by_category_path('club') %></li> 
    <li><%= link_to "Bars", locations_by_category_path('bar') %></li>
    <li><%= link_to "Events", locations_by_category_path('event') %></li>
+   <li><%= link_to "All Locations", locations_path %></li>
+   <li><%= form_tag locations_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %></li>
         </ul>
     </div>
 
 
 
-<%= form_tag locations_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-  <% end %>
+
 
 
 <div id="member_nav">
