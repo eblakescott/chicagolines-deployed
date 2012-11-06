@@ -10,12 +10,11 @@ class Location < ActiveRecord::Base
   }
 
 
-#Search function
 def self.search(search)
   if search
-    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+    where('name LIKE ?', "%#{search}%")
   else
-    find(:all)
+    scoped
   end
 end
 

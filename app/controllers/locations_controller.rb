@@ -17,21 +17,10 @@ class LocationsController < ApplicationController
     end
   end
 
-#Trying to implement a search; currently not filtering
-def index
-  @locations = Location.search(params[:search])
-end
-
-
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.order(:name)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @locations }
-    end
+    @locations = Location.search(params[:search])
   end
 
   # GET /locations/1
