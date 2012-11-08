@@ -15,7 +15,7 @@
   <% @location.waits.each do |wait| %>
     <li class="well">
       <div>
-        <%= wait.duration %><p>minutes</p>Posted at <%= wait.updated_at %>
+        <%= wait.duration %><p>minutes</p>Posted <%= wait.my_time %>
       </div>
       <!--<%= link_to 'Destroy', location_wait_path(@location,wait), method: :delete, data: { confirm: 'Are you sure?' } %>-->
     </li>
