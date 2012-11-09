@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025135337) do
+ActiveRecord::Schema.define(:version => 20121109000754) do
 
   create_table "locations", :force => true do |t|
     t.string   "image_url"
     t.string   "name"
     t.text     "description"
     t.string   "category"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "address"
+    t.string   "map_image_url"
   end
 
   create_table "members", :force => true do |t|
@@ -45,13 +47,6 @@ ActiveRecord::Schema.define(:version => 20121025135337) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
   create_table "waits", :force => true do |t|
