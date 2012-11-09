@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  attr_accessible :category, :description, :image_url, :name
+  attr_accessible :category, :description, :image_url, :name, :address, :map_image_url
   has_many :waits, dependent: :destroy
   validates :category, :description, :image_url, :name, presence: true
   validates :name, uniqueness: true

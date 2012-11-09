@@ -40,7 +40,7 @@ waits = location.waits.create([
   { duration: '20' }
 ])
 
-location = Location.create({image_url: 'field_museum_2.jpg', name: 'Field Museum', description: %{<p>The Field Museum of Natural History (abbreviated FMNH) is located in Chicago, Illinois, USA. It sits on Lake Shore Drive next to Lake Michigan, part of a scenic complex known as the Museum Campus Chicago. The museum collections contain over 21 million specimens, of which only a small portion are ever on display. The president of the museum is Richard W. Lariviere.</p>}, category: 'museum'})
+location = Location.create({image_url: 'field_museum_2.jpg', name: 'Field Museum', description: %{<p>The Field Museum of Natural History (abbreviated FMNH) is located in Chicago, Illinois, USA. It sits on Lake Shore Drive next to Lake Michigan, part of a scenic complex known as the Museum Campus Chicago. The museum collections contain over 21 million specimens, of which only a small portion are ever on display. The president of the museum is Richard W. Lariviere.</p>}, category: 'museum', address: '1400 S Lake Shore Drive, Chicago, IL', map_image_url: 'map_field_museum.png'})
 waits = location.waits.create([
   { duration: '10' },
   { duration: '15' },
