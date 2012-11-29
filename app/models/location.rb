@@ -12,7 +12,7 @@ class Location < ActiveRecord::Base
 
 def self.search(search)
   if search
-    where('name LIKE ? OR description LIKE ?', "%#{search}%", "%#{search}%")
+    where('name ILIKE ? OR description ILIKE ?', "%#{search}%", "%#{search}%")
   else
     scoped
   end
