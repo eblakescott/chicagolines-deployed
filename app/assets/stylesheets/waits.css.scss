@@ -40,8 +40,16 @@ background-color: white;
 margin-left: 20px;
 }
 
+.hero-unit h1 {
+    color: green;
+    font-size: 60px;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
 .footer {
-background-color: red;
+background-color: #DDDDDD;
     border-top: 1px solid #DDDDDD;
     margin-top: 70px;
     padding: 70px 0;
