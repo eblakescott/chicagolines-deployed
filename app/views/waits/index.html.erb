@@ -13,7 +13,7 @@
 <% if @location.waits.count > 0 %>
   <div class="hero-unit"> 
   <% @location.waits.each do |wait| %>
-      <h1><%= wait.duration %><p>minutes</p>Posted <%= wait.my_time %></h1>
+      <h1><%= wait.duration %> minutes</h1> <p>Posted <%= wait.my_time %></p>
       <!--<%= link_to 'Destroy', location_wait_path(@location,wait), method: :delete, data: { confirm: 'Are you sure?' } %>-->
  <% end %>
 
