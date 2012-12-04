@@ -14,3 +14,7 @@
  *= require waits
  *= require pages
  */
+
+.hero-unit h1 {
+color: green;
+}
