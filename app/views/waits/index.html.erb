@@ -11,21 +11,16 @@
 <!--Only display the latest wait if there are waits...-->
 
 <% if @location.waits.count > 0 %>
-  <ul>
+  <div class="hero-unit"> 
   <% @location.waits.each do |wait| %>
-    <li class="well">
-      <div>
-        <%= wait.duration %><p>minutes</p>Posted <%= wait.my_time %>
-      </div>
+      <h1><%= wait.duration %><p>minutes</p>Posted <%= wait.my_time %></h1>
       <!--<%= link_to 'Destroy', location_wait_path(@location,wait), method: :delete, data: { confirm: 'Are you sure?' } %>-->
-    </li>
-  </ul>
-<% end %>
+ <% end %>
 
 <% else %>
 <h2>There are no current wait times for this location</h2>
 <% end %>
-</blockquote>
+</div>
 
 <!--Display the form for a new wait for registered members; otherwise provide sign up and sign in links for anonymous users-->
 <% if member_signed_in? %>
