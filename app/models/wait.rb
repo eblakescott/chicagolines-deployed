@@ -4,7 +4,7 @@ class Wait < ActiveRecord::Base
 
 #See http://techoctave.com/c7/posts/23-rails-date-formats
   def my_time
-    updated_at.strftime("%B %-d %Y at %I:%M")
+    updated_at.strftime("%B %-d, %Y, at %I:%M")
   end
 end
 
