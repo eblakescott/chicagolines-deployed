@@ -1,6 +1,7 @@
 // Place all the styles related to the Waits controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// For production on heroku don't forget to precompile. Before adding or commiting changes locally run "bundle exec rake assets:precompile:all RAILS_GROUPS=assets". From http://stackoverflow.com/questions/12601751/rails-3-css-specific-for-controller-is-not-loading-in-production-heroku
 
 @import "twitter/bootstrap";
 
@@ -46,6 +47,7 @@ margin-left: 20px;
     letter-spacing: -1px;
     line-height: 1;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .footer {
